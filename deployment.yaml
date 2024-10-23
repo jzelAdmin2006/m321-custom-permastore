@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "6"
-  creationTimestamp: "2024-09-06T15:27:34Z"
-  generation: 6
+    deployment.kubernetes.io/revision: "3"
+  creationTimestamp: "2024-10-06T19:20:58Z"
+  generation: 3
   labels:
     app: permastore
     targetname: permastore
   name: permastore
   namespace: theship-vendor
-  resourceVersion: "6108443"
-  uid: c738ef72-679c-4eeb-bcbc-19807effdc16
+  resourceVersion: "11055771"
+  uid: 20ccc114-ed21-4c90-bf58-5c77cb2279ef
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -40,7 +40,7 @@ spec:
           value: 052734d35ce9067964d33e9ca0eed5019349d340
         - name: SIMULATION_HOST
           value: 192.168.101.2
-        image: 192.168.100.11:5000/permastore_8ccc7da9
+        image: 192.168.100.11:5000/permastore_285bcbb2
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
@@ -75,19 +75,19 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2024-09-18T20:41:20Z"
-    lastUpdateTime: "2024-09-18T20:41:20Z"
+  - lastTransitionTime: "2024-10-06T19:20:58Z"
+    lastUpdateTime: "2024-10-16T18:05:09Z"
+    message: ReplicaSet "permastore-6d9f9cbc7d" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2024-10-22T09:25:38Z"
+    lastUpdateTime: "2024-10-22T09:25:38Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2024-09-06T15:27:34Z"
-    lastUpdateTime: "2024-09-18T20:41:20Z"
-    message: ReplicaSet "permastore-77c6bf55d4" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  observedGeneration: 6
+  observedGeneration: 3
   readyReplicas: 1
   replicas: 1
   updatedReplicas: 1
